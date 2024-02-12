@@ -24,7 +24,9 @@ async def course_dollar(message: Message):
 		for n in text:
 			if n.isdigit() or n =='.':
 				date_txt += n
-		await message.answer(f"matn: {date_txt}")
+		joriy_sana = datetime.now().date().strftime("%d.%m.%Y")
+		if date_txt == joriy_sana:
+			await message.answer(f"Siz kiritgan sanadagi kurs: {str((course[0]['Rate']))}")
 
 
 
